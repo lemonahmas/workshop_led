@@ -8,11 +8,10 @@ import time
 
 serial = spi(port=0, device=0, gpio=noop(), block_orientation=90)
 device = max7219(serial,width=32,block_orientation=-90)
+virtual = viewport(device, width=300, height=100)
+t = time.strftime(r"%Y-%m-%d %H:%M:%S",time.gmtime())
 
-while(True):
-    virtual = viewport(device, width=300, height=100)
-
-    t = time.strftime(r"%Y-%m-%d %H:%M:%S",time.gmtime())
+while(True):   
 
     with canvas(virtual) as draw:
         #print(type(draw))
