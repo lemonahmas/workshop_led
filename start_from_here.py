@@ -6,7 +6,7 @@ from luma.core.virtual import viewport
 from luma.led_matrix.device import max7219
 import time
 
-#Please fill the angle brackets part
+#Please fill the angle brackets <> part
 
 serial = spi(port=0, device=0, gpio=noop(), block_orientation=<>)
 device = max7219(serial,width=<>,block_orientation=<>)
